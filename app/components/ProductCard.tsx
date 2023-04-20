@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeartButton from "./microComponent/HeartButton";
 import EthButton from "./microComponent/EthButton";
 import EmailAvatar from "./microComponent/EmailAvartar";
+import Timer from "./Timer";
 
 function ProductCard({
   img,
@@ -15,19 +16,24 @@ function ProductCard({
   newBid,
   button,
   className,
+  duration,
 }: any) {
   return (
     <div className={className}>
       <div className=" rounded-lg">
-        <div>
-          <Link href="/">
-            <Image
-              src={img}
-              alt="Explore Items"
-              className=" w-full rounded-md"
-            />
-          </Link>
-
+        <div className=" group transition-lg">
+          <div className=" relative">
+            <Link href="/">
+              <Image
+                src={img}
+                alt="Explore Items"
+                className=" w-full rounded-md"
+              />
+            </Link>
+            <div className=" bg-white text-black  rounded-xl px-3 py-1 absolute bottom-5 left-5 hidden  group-hover:inline-block transition-lg hover:transition-sm">
+              <Timer targetDate={duration} />
+            </div>
+          </div>
           <div className=" mt-[1.375rem]">
             <div className="flex justify-between">
               <div className="flex gap-1 items-center">

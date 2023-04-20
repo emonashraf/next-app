@@ -22,13 +22,18 @@ function Collection() {
           {cardData.slice(0, 3).map((item: any) => (
             <div key={item?.id}>
               <CollectionCard
+                className=" p-5 secondary-gradient rounded-xl"
                 img={item?.img}
                 img2={item?.img2}
                 img3={item?.img3}
                 img4={item?.img4}
-                avatar={item?.avatar}
+                circle={item?.circle}
                 title={item?.title}
                 email={item?.email}
+                nfts={item?.nfts}
+                creator={item?.creator}
+                like={item?.like}
+                V3
               />
             </div>
           ))}

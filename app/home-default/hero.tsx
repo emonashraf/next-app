@@ -16,9 +16,9 @@ import ButtonTransparent from "../components/btn/ButtonTransparent";
 
 function hero() {
   return (
-    <div className=" bg-heroV1 h-screen  w-full flex items-center pt-40 lg:pt-0 py-20 ">
+    <div className=" bg-heroDefault bg-cover bg-center bg-no-repeat w-full h-full pt-40 lg:pt-0 py-20 ">
       <div className="container mx-auto px-4">
-        <div className="grid gap-10 lg:grid-cols-2 justify-between  items-center">
+        <div className=" h-screen w-full grid gap-10 lg:grid-cols-2 justify-between  items-center">
           {/* Hero Left */}
           <div>
             <div className="flex flex-col justify-center lg:justify-normal">

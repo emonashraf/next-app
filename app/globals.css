@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-item {
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-item:hover {
+  background-color: #e2e8f0;
+}
+
+.pagination-item.active {
+  background-color: #2d3748;
+  color: white;
+}
+
 .slick-slide > div {
   margin: 0 14px;
 }
@@ -48,7 +71,7 @@
     @apply text-xs  font-normal font-manrope;
   }
   input {
-    @apply bg-navy-200 p-[10px] px-[15px] rounded-md border-0 shadow-none focus:shadow-none focus:outline-0;
+    @apply bg-navy-200 p-[10px] px-[15px] inline-block rounded-md border-0 shadow-none focus:shadow-none focus:outline-0;
   }
 }
 
@@ -63,13 +86,13 @@
     @apply py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16;
   }
   .tab {
-    @apply bg-navy-100 p-6 text-white py-2 rounded-md hover:bg-blue focus:bg-blue focus:border-none;
+    @apply bg-navy-100 px-5 text-white py-4 rounded-md hover:bg-blue focus:bg-blue focus:border-none;
   }
   .social-icon {
     @apply text-white border border-white rounded-full p-2 text-4xl hover:bg-blue-300 transition-lg hover:transition-sm hover:border-blue-300;
   }
   .card-btn {
-    @apply px-5 py-3 flex gap-1  items-center bg-navy-200 text-base text-blue-300 hover:text-white border-blue rounded-md font-semibold hover:bg-gradient-to-t hover:from-blue-100 hover:to-blue-200  transition-all hover:transition-all group-hover:bg-gradient-to-t group-hover:from-blue-100 group-hover:to-blue-200 group-hover:text-white group-hover:transition-sm hover:transition-sm;
+    @apply px-3 py-[6px] flex gap-1  items-center bg-navy-200 text-base text-blue-300 hover:text-white border-blue rounded-lg font-semibold hover:bg-gradient-to-t hover:from-blue-100 hover:to-blue-200  transition-all hover:transition-all group-hover:bg-gradient-to-t group-hover:from-blue-100 group-hover:to-blue-200 group-hover:text-white group-hover:transition-sm hover:transition-sm;
   }
   .bg-shadow {
     @apply before:content-['']  before:absolute before:top-0 before:left-0  before:w-full before:h-full before:bg-[#1E1E37E5] opacity-40 transition-sm;
@@ -77,11 +100,34 @@
   .position-center {
     @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%];
   }
-  .position-right-center {
-    @apply absolute top-[50%] right-0 translate-x-[50%] translate-y-[-50%];
+  .position-left-center {
+    @apply absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%];
+  }
+
+  .before-shape {
+    @apply before:content-['']  before:absolute before:w-4 before:h-[2px] before:top-[50%] before:translate-y-[-50%] before:right-[100%] before:bg-blue-300 inline-block;
+  }
+  .after-shape {
+    @apply before:content-['']  after:absolute after:w-4 after:h-[2px] after:top-[50%] after:translate-y-[-50%] after:left-[100%] after:bg-blue-300 inline-block;
+  }
+  .primary-gradient {
+    @apply bg-gradient-to-b from-blue-200 to-blue-100 hover:bg-gradient-to-t hover:from-blue-200 hover:to-blue-100;
+  }
+  .secondary-gradient {
+    @apply bg-gradient-to-b from-navy-100 to-transparent;
   }
 }
 @layer utilities {
+  .right-center {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+  .rotate-y-180 {
+    transform: "rotateY(180deg)";
+  }
+
   .transition-sm {
     transition: all 0.3s ease;
   }

@@ -4,7 +4,7 @@ import HeroSlider from "./heroSlider";
 
 function Hero() {
   return (
-    <div className=" bg-heroV2  bg-cover h-full w-full">
+    <div className="  h-full w-full bg-heroModarn  bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto px-4">
         <div className="h-screen grid grid-cols-1 lg:grid-cols-2 justify-between items-center">
           {/* Hero Left */}

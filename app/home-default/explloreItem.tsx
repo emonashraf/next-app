@@ -41,6 +41,7 @@ function ExplloreItem() {
                           avatarImg={item?.avatarImg}
                           newBid={item?.newBid}
                           button={item?.button}
+                          duration={item?.duration}
                         />
                       </div>
                     ))}

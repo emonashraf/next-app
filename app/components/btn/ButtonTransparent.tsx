@@ -6,7 +6,7 @@ function ButtonTransparent({ name, href, className }: any) {
     <div>
       <Link
         href={href}
-        className=" px-5 py-3 flex gap-1  items-center bg-transparent text-base text-white shadow  border-blue rounded-md font-semibold hover:bg-gradient-to-t hover:from-blue-100 hover:text-white hover:to-blue-200  transition-all hover:transition-all "
+        className=" px-5 py-3 flex gap-1  items-center bg-navy-200 text-base text-white shadow  border-blue rounded-md font-semibold hover:bg-gradient-to-t hover:from-blue-100 hover:text-white hover:to-blue-200  transition-all hover:transition-all "
       >
         {name}
         <BsArrowRightShort size="24" />

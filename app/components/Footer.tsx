@@ -2,9 +2,9 @@ import React from "react";
 import SocialIcons from "./microComponent/SocialIcons";
 import Link from "next/link";
 import { TbArrowNarrowRight, TbArrowUpRight } from "react-icons/tb";
-function Footer({ V1, V2 }: any) {
+function Footer({ V1, V2, V3 }: any) {
   return (
-    <div className="ptb h-full bg-footerBgV1 bg-cover">
+    <div className="ptb h-full bg-footerBgV1 bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto px-4">
         <div className=" between p-b">
           <h3>
@@ -37,16 +37,18 @@ function Footer({ V1, V2 }: any) {
                 </Link>
               </div>
             )}
-            <div className=" between border-b border-[#26263C]">
-              <input
-                type="text"
-                placeholder="Enter email address"
-                className=" w-full inline-block  bg-transparent"
-              />
-              <Link href="/">
-                <TbArrowUpRight className=" text-blue-300 text-xl" />
-              </Link>
-            </div>
+            {!V1 && (
+              <div className=" between border-b border-[#26263C]">
+                <input
+                  type="text"
+                  placeholder="Enter email address"
+                  className=" w-full inline-block  bg-transparent"
+                />
+                <Link href="/">
+                  <TbArrowUpRight className=" text-blue-300 text-xl" />
+                </Link>
+              </div>
+            )}
           </div>
           <div className="basis-[800px]  grow shrink">
             <div className=" between  flex-wrap gap-x-32 gap-10 ">

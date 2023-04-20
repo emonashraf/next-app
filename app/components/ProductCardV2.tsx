@@ -6,6 +6,8 @@ import EthButton from "./microComponent/EthButton";
 import EmailAvatar from "./microComponent/EmailAvartar";
 import ShareButton from "./microComponent/ShareButton";
 import StarButton from "./microComponent/StarButton";
+import Timer from "./Timer";
+import ClassNames from "embla-carousel-class-names/components";
 
 function ProductCardV2({
   img,
@@ -18,14 +20,24 @@ function ProductCardV2({
   button,
   buttonHref,
   buttonIcon,
-  dutationV2,
+  duration,
+  className,
 }: any) {
   return (
     <div className=" rounded-lg group group-hover:transition-lg">
       <div>
-        <Link href="/">
-          <Image src={img} alt="Explore Items" className=" w-full rounded-md" />
-        </Link>
+        <div className=" relative">
+          <Link href="/">
+            <Image
+              src={img}
+              alt="Explore Items"
+              className=" w-full rounded-md"
+            />
+          </Link>
+          <div className=" bg-white text-black  rounded-xl px-3 py-1 absolute bottom-5 left-5 hidden  group-hover:inline-block transition-lg hover:transition-sm">
+            <Timer targetDate={duration} />
+          </div>
+        </div>
         <div className=" mt-[1.375rem]">
           <div className=" between">
             <h4>

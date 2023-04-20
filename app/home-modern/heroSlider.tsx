@@ -72,7 +72,7 @@ const HeroSlider = () => {
                   {/* Ring 1 */}
                   <div>
                     <div className=" h-[60px] w-[60px] absolute bottom-[20%] left-0 z-[-1] translate-x-[-50%] rounded-full border-[12px] border-[#7D8AFF]"></div>
-                    <div className=" h-[60px] w-[60px] absolute bottom-[35%] translate-x-[50%] right-0 z-[-1]  rounded-full   border-[12px] border-[#FCA5A5]"></div>
+                    <div className=" h-[60px] w-[60px] absolute bottom-[35%] translate-x-[50%] right-0 z-[-1]  rounded-full border-[12px] border-[#FCA5A5]"></div>
                   </div>
                 </div>
               </div>

@@ -13,9 +13,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      screens: {
-        xs: "400px",
-      },
+      // screens: {
+      //   xs: "400px",
+      // },
       colors: {
         blue: {
           DEFAULT: "#5F5FFF",
@@ -38,9 +38,10 @@ module.exports = {
       },
 
       backgroundImage: {
-        heroV1: "url(../public/img/hero-bg.png)",
-        heroV2: "url(../public/img/heroV2-bg.png)",
-
+        heroDefault: "url(../public/img/hero-default-bg.png)",
+        heroModarn: "url(../public/img/hero-modern-bg.png)",
+        heroClasic: "url(../public/img/hero-clasic-bg.png)",
+        breadCrumb: "url(../public/img/breadcrumb-bg.png)",
         footerBgV1: "url(../public/img/footer-bg.png)",
       },
     },
@@ -48,6 +49,9 @@ module.exports = {
   plugins: [
     ({ addUtilities }) => {
       addUtilities({
+        ".rotate-y-180": {
+          transform: "rotateY(180deg)",
+        },
         ".transition-sm": {
           transition: "all 0.3s ease",
         },
@@ -68,6 +72,12 @@ module.exports = {
           display: "flex",
           alignItems: "center",
           gap: "5px",
+        },
+        " .right-center": {
+          position: "absolute",
+          right: 0,
+          top: " 50%",
+          transform: "translate(50%, -50%)",
         },
       });
     },

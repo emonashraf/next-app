@@ -16,7 +16,7 @@ function HomeDefault() {
       <LiveAction />
       <Collections />
       <TopSeller />
-      <Footer />
+      <Footer V1 />
     </div>
   );
 }

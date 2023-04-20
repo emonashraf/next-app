@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import Data from "../data/db";
@@ -19,6 +20,7 @@ function Collections() {
                 title={item?.title}
                 email={item?.email}
                 item={item?.item}
+                V1
               />
             </div>
           ))}

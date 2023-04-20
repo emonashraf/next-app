@@ -18,7 +18,7 @@ function HomeModern() {
       <TopSeller />
       <Collection />
       <LiveActions />
-      <Timer />
+
       <Footer V2 />
     </div>
   );
